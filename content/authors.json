@@ -1,0 +1,53 @@
+{
+  "authors": [
+    {
+      "id": "Mingyu-Shu",
+      "name": "舒明宇",
+      "avatar": "/static/images/avatars/舒明宇.jpg",
+      "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+      "links": {
+        "github": "https://github.com/mingyu",
+        "twitter": "https://twitter.com/mingyu",
+        "website": "https://mingyu.dev",
+        "orcid": "https://orcid.org/0000-0000-0000-0000"
+      },
+      "publications": [
+        {
+          "title": "Multi-scale Dynamic Correlation Between Climate Shock and China's Stock Market: Evidence Based on High Frequency Data",
+          "journal": "Computational Economics",
+          "year": 2024,
+          "doi": "10.1007/s10614-024-10790-3",
+          "authors": "Mingyu Shu, Jieli Wang, Menglong Chen, Hanru Wang"
+        }
+      ]
+    },
+    {
+        "id": "Fengming-Liu",
+        "name": "刘丰铭",
+        "avatar": "/static/images/avatars/刘丰铭.jpg",
+        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+        "links": {
+          "github": "https://github.com/LFM097384",
+          "twitter": "https://twitter.com/fengming",
+          "website": "https://fengming.dev",
+          "orcid": "https://orcid.org/0009-0009-3881-496X"
+        },
+        "publications": [
+        ]
+    },
+    {
+      "id": "Shun-Wang",
+      "name": "汪顺",
+      "avatar": "/static/images/avatars/汪顺.jpg",
+      "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+      "links": {
+        "github": "https://github.com/shun",
+        "twitter": "https://twitter.com/shun",
+        "website": "https://shun.dev",
+        "orcid": "https://orcid.org/0009-0009-3881-0000"
+      },
+      "publications": [
+      ]
+    }
+  ]
+}
