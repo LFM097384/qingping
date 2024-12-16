@@ -1,0 +1,25 @@
+{
+  "default": "/static/images/background/nature.jpg",
+  "pages": {
+    "home": {
+      "image": "/static/images/background/bamboo.jpg",
+      "opacity": 0.8
+    },
+    "about": {
+      "image": "/static/images/background/nature.jpg",
+      "opacity": 0.8
+    },
+    "blog": {
+      "image": "/static/images/background/nature.jpg",
+      "opacity": 0.9
+    },
+    "authors": {
+      "image": "/static/images/background/nature.jpg",
+      "opacity": 0.8
+    },
+    "author": {
+      "image": "/static/images/background/nature.jpg",
+      "opacity": 0.8
+    }
+  }
+}

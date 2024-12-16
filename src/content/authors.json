@@ -1,0 +1,38 @@
+{
+  "authors": [
+    {
+      "id": "Mingyu Shu",
+      "name": "舒明宇",
+      "avatar": "/images/avatars/qingping.jpg",
+      "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+      "links": {
+        "github": "https://github.com/qingping",
+        "twitter": "https://twitter.com/qingping",
+        "website": "https://qingping.dev"
+      }
+    },
+    {
+        "id": "Fengming Liu",
+        "name": "刘丰铭",
+        "avatar": "/images/avatars/刘丰铭.jpg",
+        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+        "links": {
+          "github": "https://github.com/qingping",
+          "twitter": "https://twitter.com/qingping",
+          "website": "https://qingping.dev"
+        }
+    },
+    {
+        "id": "Shun Wang",
+        "name": "汪顺",
+        "avatar": "/images/avatars/qingping.jpg",
+        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+        "links": {
+          "github": "https://github.com/qingping",
+          "twitter": "https://twitter.com/qingping",
+          "website": "https://qingping.dev"
+        }
+    }
+
+  ]
+}

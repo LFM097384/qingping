@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "001",
+      "title": "青萍随笔其一",
+      "summary": "春日独坐，思绪潺潺...",
+      "date": "2023-08-20",
+      "tags": ["随笔", "生活"],
+      "fileName": "001-spring-thoughts.md",
+      "authorId": "Mingyu-Shu",
+      "authorName": "舒明宇",
+      "authorAvatar": "/static/images/avatars/舒明宇.jpg"
+    },
+    {
+      "id": "002",
+      "title": "闲话竹语",
+      "summary": "庭前竹影摇曳...",
+      "date": "2023-08-21",
+      "tags": ["随笔", "自然"],
+      "fileName": "002-bamboo-story.md",
+      "authorId": "Fengming-Liu",
+      "authorName": "刘丰铭",
+      "authorAvatar": "/static/images/avatars/刘丰铭.jpg"
+    }
+  ]
+}
