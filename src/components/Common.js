@@ -53,9 +53,15 @@ export function PageContainer({ children, maxWidth = 'md', sx = {} }) {
     <Container 
       maxWidth={maxWidth} 
       sx={{ 
-        py: 2,  // 减小上下边距
-        height: '100%',
-        position: 'relative'
+        height: 'calc(100% - 32px)', // 增加上下边距
+        display: 'flex',
+        flexDirection: 'column',
+        py: 2,
+        position: 'absolute',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '100%',
+        ...sx
       }}
     >
       <AnimatePresence mode="wait">
@@ -66,32 +72,60 @@ export function PageContainer({ children, maxWidth = 'md', sx = {} }) {
           animate="animate"
           exit="exit"
           style={{ 
-            perspective: 1000,
-            transformStyle: 'preserve-3d'
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative'
           }}
         >
           <Paper
             elevation={3}
             sx={{
-              p: 3,
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'relative',
               backgroundColor: 'rgba(255, 255, 255, 0.9)',
               backdropFilter: 'blur(10px)',
               borderRadius: 2,
-              position: 'relative',
-              transformOrigin: 'center',
-              overflow: 'hidden',
-              mb: 2,
-              ...sx
+              overflow: 'hidden'
             }}
           >
-            <motion.div
-              variants={containerVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                overflowY: 'auto',
+                overflowX: 'hidden',
+                p: 3,
+                '&::-webkit-scrollbar': {
+                  width: '6px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  backgroundColor: 'rgba(0,0,0,0.05)',
+                  borderRadius: '3px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: 'rgba(44, 85, 48, 0.3)',
+                  borderRadius: '3px',
+                  '&:hover': {
+                    backgroundColor: 'rgba(44, 85, 48, 0.5)',
+                  },
+                }
+              }}
             >
-              {children}
-            </motion.div>
+              <motion.div
+                variants={containerVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                {children}
+              </motion.div>
+            </Box>
           </Paper>
         </motion.div>
       </AnimatePresence>

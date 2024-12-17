@@ -9,7 +9,7 @@ import {
   IconButton,
   Stack
 } from '@mui/material';
-import { PageContainer, FadeIn } from '../components/Common';
+import { PageContainer, FadeIn } from '../components/Common';  // 修改导入路径
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -26,8 +26,8 @@ function AuthorCard({ author }) {
     <Paper
       elevation={3}
       sx={{
-        p: 3,
-        height: '100%',  // 确保卡片等高
+        p: 2.5, // 减少内边距
+        height: '200px', // 固定高度
         cursor: 'pointer',
         transition: 'transform 0.2s, box-shadow 0.2s',
         backgroundColor: 'rgba(255, 255, 255, 0.9)',
@@ -39,72 +39,77 @@ function AuthorCard({ author }) {
       }}
       onClick={() => navigate(`/author/${author.id}`)}
     >
-      <Stack alignItems="center" spacing={2} height="100%">
+      <Stack 
+        direction="row" // 改为水平布局
+        spacing={2.5}
+        height="100%"
+      >
         <Avatar
           src={author.avatar}
           alt={author.name}
           sx={{ 
-            width: 100, 
-            height: 100,
+            width: 80, // 减小头像尺寸
+            height: 80,
             border: '3px solid rgba(44, 85, 48, 0.1)'
           }}
         />
-        <Typography variant="h6" color="#2c5530" fontWeight="500">
-          {author.name}
-        </Typography>
-        <Typography 
-          variant="body2" 
-          color="text.secondary" 
-          textAlign="center"
-          sx={{ 
-            flexGrow: 1,
-            display: '-webkit-box',
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis'
-          }}
-        >
-          {author.bio}
-        </Typography>
-        <Stack direction="row" spacing={1} justifyContent="center">
-          {author.links.github && (
-            <IconButton 
-              size="small"
-              onClick={(e) => handleSocialClick(e, author.links.github)}
-              sx={{ 
-                color: '#2c5530',
-                '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
-              }}
-            >
-              <GitHubIcon />
-            </IconButton>
-          )}
-          {author.links.twitter && (
-            <IconButton 
-              size="small"
-              onClick={(e) => handleSocialClick(e, author.links.twitter)}
-              sx={{ 
-                color: '#2c5530',
-                '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
-              }}
-            >
-              <TwitterIcon />
-            </IconButton>
-          )}
-          {author.links.website && (
-            <IconButton 
-              size="small"
-              onClick={(e) => handleSocialClick(e, author.links.website)}
-              sx={{ 
-                color: '#2c5530',
-                '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
-              }}
-            >
-              <LanguageIcon />
-            </IconButton>
-          )}
-        </Stack>
+        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <Typography variant="h6" color="#2c5530" fontWeight="500" gutterBottom>
+            {author.name}
+          </Typography>
+          <Typography 
+            variant="body2" 
+            color="text.secondary"
+            sx={{ 
+              flex: 1,
+              display: '-webkit-box',
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis'
+            }}
+          >
+            {author.bio}
+          </Typography>
+          <Stack direction="row" spacing={1} justifyContent="flex-start" sx={{ mt: 1 }}>
+            {author.links.github && (
+              <IconButton 
+                size="small"
+                onClick={(e) => handleSocialClick(e, author.links.github)}
+                sx={{ 
+                  color: '#2c5530',
+                  '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
+                }}
+              >
+                <GitHubIcon />
+              </IconButton>
+            )}
+            {author.links.twitter && (
+              <IconButton 
+                size="small"
+                onClick={(e) => handleSocialClick(e, author.links.twitter)}
+                sx={{ 
+                  color: '#2c5530',
+                  '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
+                }}
+              >
+                <TwitterIcon />
+              </IconButton>
+            )}
+            {author.links.website && (
+              <IconButton 
+                size="small"
+                onClick={(e) => handleSocialClick(e, author.links.website)}
+                sx={{ 
+                  color: '#2c5530',
+                  '&:hover': { color: '#588157', backgroundColor: 'rgba(44, 85, 48, 0.1)' }
+                }}
+              >
+                <LanguageIcon />
+              </IconButton>
+            )}
+          </Stack>
+        </Box>
       </Stack>
     </Paper>
   );
@@ -166,7 +171,10 @@ function Authors() {
   }
 
   return (
-    <PageContainer>
+    <PageContainer 
+      maxWidth="lg"
+      sx={{ height: 'calc(100% - 48px)' }} // 为 Authors 页面特别增加边距
+    >
       <Typography 
         variant="h4" 
         gutterBottom 
@@ -178,7 +186,7 @@ function Authors() {
       </Typography>
       <Grid container spacing={3}>
         {authors.map((author) => (
-          <Grid item xs={12} sm={6} md={4} key={author.id}>
+          <Grid item xs={12} md={6} lg={4} key={author.id}>
             <FadeIn>
               <AuthorCard author={author} />
             </FadeIn>

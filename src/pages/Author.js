@@ -10,7 +10,7 @@ import {
   Grid,
   Paper
 } from '@mui/material';
-import { PageContainer, FadeIn } from '../components/Common';  // 修改这行
+import { PageContainer, FadeIn } from '../components/Common';  // 修改导入路径
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -124,80 +124,83 @@ function Author() {
 
   return (
     <PageContainer maxWidth="md">
-      <IconButton
-        onClick={() => navigate('/authors')}
-        sx={{
-          position: 'absolute',
-          left: 20,
-          top: 20,
-          color: '#2c5530',
-          '&:hover': { backgroundColor: 'rgba(44, 85, 48, 0.1)' }
-        }}
-      >
-        <ArrowBackIcon />
-      </IconButton>
-      
-      <FadeIn>
-        <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Avatar
-            src={author.avatar}
-            alt={author.name}
-            sx={{
-              width: 150,
-              height: 150,
-              margin: '0 auto',
-              mb: 3,
-              border: '4px solid rgba(44, 85, 48, 0.1)'
-            }}
-          />
-          <Typography variant="h3" gutterBottom color="#2c5530" sx={{ fontWeight: 500 }}>
-            {author.name}
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 4, color: '#666666', maxWidth: '600px', mx: 'auto' }}>
-            {author.bio}
-          </Typography>
-          <Stack direction="row" spacing={2} justifyContent="center">
-            <SocialLink icon={<GitHubIcon />} url={author.links.github} label="GitHub" />
-            <SocialLink icon={<TwitterIcon />} url={author.links.twitter} label="Twitter" />
-            <SocialLink icon={<LanguageIcon />} url={author.links.website} label="Website" />
-            <SocialLink 
-              icon={<SchoolIcon />} 
-              url={author.links.orcid} 
-              label="ORCID"
+      <Box sx={{ position: 'relative', pb: 4 }}>
+        <IconButton
+          onClick={() => navigate('/authors')}
+          sx={{
+            position: 'absolute',
+            left: 20,
+            top: 20,
+            color: '#2c5530',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            '&:hover': { backgroundColor: 'rgba(44, 85, 48, 0.1)' }
+          }}
+        >
+          <ArrowBackIcon />
+        </IconButton>
+        
+        <FadeIn>
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Avatar
+              src={author.avatar}
+              alt={author.name}
+              sx={{
+                width: 150,
+                height: 150,
+                margin: '0 auto',
+                mb: 3,
+                border: '4px solid rgba(44, 85, 48, 0.1)'
+              }}
             />
-          </Stack>
-        </Box>
-
-        <PublicationsList publications={author.publications} />
-
-        {posts.length > 0 && (
-          <Box sx={{ mt: 6 }}>
-            <Typography variant="h5" gutterBottom color="#2c5530" sx={{ mb: 3 }}>
-              最近的文章
+            <Typography variant="h3" gutterBottom color="#2c5530" sx={{ fontWeight: 500 }}>
+              {author.name}
             </Typography>
-            <Grid container spacing={3}>
-              {posts.map(post => (
-                <Grid item xs={12} key={post.id}>
-                  <Paper
-                    sx={{
-                      p: 3,
-                      cursor: 'pointer',
-                      transition: 'transform 0.2s',
-                      '&:hover': { transform: 'translateX(8px)' }
-                    }}
-                    onClick={() => navigate(`/blog/post/${post.id}`)}
-                  >
-                    <Typography variant="h6" color="#2c5530">{post.title}</Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {post.date}
-                    </Typography>
-                  </Paper>
-                </Grid>
-              ))}
-            </Grid>
+            <Typography variant="body1" sx={{ mb: 4, color: '#666666', maxWidth: '600px', mx: 'auto' }}>
+              {author.bio}
+            </Typography>
+            <Stack direction="row" spacing={2} justifyContent="center">
+              <SocialLink icon={<GitHubIcon />} url={author.links.github} label="GitHub" />
+              <SocialLink icon={<TwitterIcon />} url={author.links.twitter} label="Twitter" />
+              <SocialLink icon={<LanguageIcon />} url={author.links.website} label="Website" />
+              <SocialLink 
+                icon={<SchoolIcon />} 
+                url={author.links.orcid} 
+                label="ORCID"
+              />
+            </Stack>
           </Box>
-        )}
-      </FadeIn>
+
+          <PublicationsList publications={author.publications} />
+
+          {posts.length > 0 && (
+            <Box sx={{ mt: 6 }}>
+              <Typography variant="h5" gutterBottom color="#2c5530" sx={{ mb: 3 }}>
+                最近的文章
+              </Typography>
+              <Grid container spacing={3}>
+                {posts.map(post => (
+                  <Grid item xs={12} key={post.id}>
+                    <Paper
+                      sx={{
+                        p: 3,
+                        cursor: 'pointer',
+                        transition: 'transform 0.2s',
+                        '&:hover': { transform: 'translateX(8px)' }
+                      }}
+                      onClick={() => navigate(`/blog/post/${post.id}`)}
+                    >
+                      <Typography variant="h6" color="#2c5530">{post.title}</Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {post.date}
+                      </Typography>
+                    </Paper>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          )}
+        </FadeIn>
+      </Box>
     </PageContainer>
   );
 }

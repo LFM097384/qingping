@@ -16,10 +16,9 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import PageContainer from '../components/PageContainer';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { FadeIn } from '../components/Common';
+import { PageContainer, FadeIn } from '../components/Common';  // 修改导入路径
 import { motion } from 'framer-motion';
 
 const postListVariants = {

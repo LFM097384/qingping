@@ -52,27 +52,26 @@ const globalStyles = {
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
     minHeight: '100vh',
-    transition: 'background-image 0.3s ease-in-out',
-    overflow: 'hidden'  // 防止body滚动
+    overflow: 'hidden'
   },
   '.App': {
-    minHeight: '100vh',
+    height: '100vh',  // 修改为固定高度
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden'  // 防止整体滚动
+    overflow: 'hidden'
   },
   '.main-content': {
     flex: 1,
+    paddingTop: '64px',
     position: 'relative',
-    overflowY: 'auto',  // 只允许内容区域滚动
-    paddingTop: '64px'  // 为导航栏留出空间
+    display: 'flex',
+    overflow: 'hidden'
   },
   '.navbar': {
-    position: 'fixed',  // 固定导航栏
+    position: 'fixed',
+    width: '100%',
     top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 1100
+    zIndex: 1100,
   }
 };
 
