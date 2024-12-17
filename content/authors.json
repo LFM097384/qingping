@@ -22,20 +22,6 @@
       ]
     },
     {
-        "id": "Fengming-Liu",
-        "name": "刘丰铭",
-        "avatar": "/static/images/avatars/刘丰铭.jpg",
-        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
-        "links": {
-          "github": "https://github.com/LFM097384",
-          "twitter": "https://twitter.com/fengming",
-          "website": "https://fengming.dev",
-          "orcid": "https://orcid.org/0009-0009-3881-496X"
-        },
-        "publications": [
-        ]
-    },
-    {
       "id": "Shun-Wang",
       "name": "汪顺",
       "avatar": "/static/images/avatars/汪顺.jpg",
@@ -48,6 +34,20 @@
       },
       "publications": [
       ]
+    },
+    {
+        "id": "Fengming-Liu",
+        "name": "刘丰铭",
+        "avatar": "/static/images/avatars/刘丰铭.jpg",
+        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+        "links": {
+          "github": "https://github.com/LFM097384",
+          "twitter": "https://twitter.com/fengming",
+          "website": "https://fengming.dev",
+          "orcid": "https://orcid.org/0009-0009-3881-496X"
+        },
+        "publications": [
+        ]
     }
   ]
 }
