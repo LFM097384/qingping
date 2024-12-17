@@ -1,15 +1,86 @@
 {
   "authors": [
     {
+      "id": "Shun-Wang",
+      "name": "汪顺",
+      "avatar": "/static/images/avatars/汪顺.png",
+      "bio": "安徽大学会计学硕士研究生导师",
+      "links": {
+        "github": "https://github.com/shun",
+        "twitter": "https://twitter.com/shun",
+        "website": "https://shun.dev",
+        "orcid": "https://orcid.org/0009-0009-3881-0000"
+      },
+      "publications": [
+        {
+          "title": "平衡的发展目标与不平衡的发展——增长目标偏离与企业创新",
+          "journal": "管理世界",
+          "year": 2020,
+          "doi": "10.19744/j.cnki.11-1235/f.2020.0190",
+          "authors": "黎文靖, 汪顺, 陈黄悦;"
+        },
+        {
+          "title": "知识产权保护与企业创新信息困境",
+          "journal": "中国工业经济",
+          "year": 2022,
+          "doi": "10.19581/j.cnki.ciejournal.2022.06.020",
+          "authors": "周泽将, 汪顺, 张悦"
+        },
+        {
+          "title": "税制绿色化的微观政策效应 ——基于企业环保新闻文本情绪数据的检验",
+          "journal": "中国工业经济",
+          "year": 2023,
+          "doi": "10.19581/j.cnki.ciejournal.2023.07.005",
+          "authors": "周泽将, 汪顺, 张悦"
+        },
+        {
+          "title": "供应链气候风险与企业商业信用契约",
+          "journal": "系统工程理论与实践",
+          "year": 2023,
+          "doi": "10.12011/SETP2022-3233",
+          "authors": "汪顺, 周泽将, 余璐"
+        }
+        
+      ]
+    },
+    {
+      "id": "Jiahui-Yan",
+      "name": "闫佳慧",
+      "avatar": "/static/images/avatars/闫佳慧.jpg",
+      "bio": "安徽大学商学院硕士研究生，研究方向为公司治理与财务会计理论",
+      "links": {
+        "github": "https://github.com/",
+        "twitter": "https://twitter.com/",
+        "website": "https://",
+        "orcid": "https://orcid.org/"
+      },
+      "publications": [
+      ]
+    },
+    {
+      "id": "Jiahui-Wu",
+      "name": "伍佳慧",
+      "avatar": "/static/images/avatars/伍佳慧.jpg",
+      "bio": "安徽大学商学院硕士研究生，研究方向为公司治理与财务会计理论",
+      "links": {
+        "github": "https://github.com/",
+        "twitter": "https://twitter.com/",
+        "website": "https://",
+        "orcid": "https://orcid.org/"
+      },
+      "publications": [
+      ]
+    },
+    {
       "id": "Mingyu-Shu",
       "name": "舒明宇",
       "avatar": "/static/images/avatars/舒明宇.jpg",
-      "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+      "bio": "本人致力于发展经济学、微观经济理论和金融风险管理研究",
       "links": {
         "github": "https://github.com/mingyu",
         "twitter": "https://twitter.com/mingyu",
         "website": "https://mingyu.dev",
-        "orcid": "https://orcid.org/0000-0000-0000-0000"
+        "orcid": "https://orcid.org/"
       },
       "publications": [
         {
@@ -22,32 +93,19 @@
       ]
     },
     {
-      "id": "Shun-Wang",
-      "name": "汪顺",
-      "avatar": "/static/images/avatars/汪顺.jpg",
-      "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
+      "id": "Fengming-Liu",
+      "name": "刘丰铭",
+      "avatar": "/static/images/avatars/刘丰铭.jpg",
+      "bio": "UCL本科政治经济哲学学生",
       "links": {
-        "github": "https://github.com/shun",
-        "twitter": "https://twitter.com/shun",
-        "website": "https://shun.dev",
-        "orcid": "https://orcid.org/0009-0009-3881-0000"
+        "github": "https://github.com/LFM097384",
+        "twitter": "https://twitter.com/",
+        "website": "https://liu_fengming.me",
+        "orcid": "https://orcid.org/0009-0009-3881-496X"
       },
       "publications": [
       ]
-    },
-    {
-        "id": "Fengming-Liu",
-        "name": "刘丰铭",
-        "avatar": "/static/images/avatars/刘丰铭.jpg",
-        "bio": "「青萍之末，风之余也」，在这里记录生活的点滴感悟。",
-        "links": {
-          "github": "https://github.com/LFM097384",
-          "twitter": "https://twitter.com/fengming",
-          "website": "https://fengming.dev",
-          "orcid": "https://orcid.org/0009-0009-3881-496X"
-        },
-        "publications": [
-        ]
     }
+    
   ]
 }
