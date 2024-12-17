@@ -10,12 +10,11 @@ import {
   Grid,
   Paper
 } from '@mui/material';
-import PageContainer from '../components/PageContainer';
+import { PageContainer, FadeIn } from '../components/Common';  // 修改这行
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import FadeIn from '../components/FadeIn';
 import SchoolIcon from '@mui/icons-material/School';  // 为 ORCID 添加图标
 import ArticleIcon from '@mui/icons-material/Article';  // 为出版物添加图标
 

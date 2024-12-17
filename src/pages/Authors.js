@@ -9,11 +9,10 @@ import {
   IconButton,
   Stack
 } from '@mui/material';
-import PageContainer from '../components/PageContainer';
+import { PageContainer, FadeIn } from '../components/Common';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
-import FadeIn from '../components/FadeIn';
 
 function AuthorCard({ author }) {
   const navigate = useNavigate();
@@ -175,7 +174,7 @@ function Authors() {
         align="center" 
         sx={{ mb: 4, fontWeight: 500 }}
       >
-        作者列表
+        青萍作者
       </Typography>
       <Grid container spacing={3}>
         {authors.map((author) => (
